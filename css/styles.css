@@ -1,9 +1,14 @@
-:root {
+/* ═══════════════════════════════════════════════════════════════
+   کلاس درس ساختمان داده و الگوریتم‌ها — استایل
+   تم آموزشی جدی (تیلا/کهربایی) · داشبورد فشرده · RTL · سه‌بعدی
+   ═══════════════════════════════════════════════════════════════ */
 
-  --acc1: #17b3a6;  
-  --acc2: #3e7cb8;  
-  --acc3: #c9972e;  
-  --acc4: #8f7bb8;  
+:root {
+  /* پالت — آموزشی و جدی: تیلا عمودی + آبی-فولادی + کهربا */
+  --acc1: #17b3a6;  /* تیلا — اصلی */
+  --acc2: #3e7cb8;  /* آبی فولادی */
+  --acc3: #c9972e;  /* کهربا */
+  --acc4: #8f7bb8;  /* بنفش خنثی — کم */
   --rb-red: #d9706a;
   --rb-black: #26313a;
   --acc: var(--acc1);
@@ -92,7 +97,7 @@ body::before {
 
 main { position: relative; z-index: 1; }
 
-
+/* ═══════════ داشبورد / نمایش یک‌بازِ بخش‌ها ═══════════ */
 .view:not(.active) { display: none !important; }
 .view.active { display: block; animation: viewIn 0.6s var(--ease-out); }
 .hero.view.active { display: flex; }
@@ -104,7 +109,7 @@ main { position: relative; z-index: 1; }
   .view.active { animation: none; }
 }
 
-
+/* ─── شکل‌های هندسی شناور تزئینی ─── */
 .deco { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
 main > section { position: relative; z-index: 1; }
 .deco-shape {
@@ -123,7 +128,7 @@ main > section { position: relative; z-index: 1; }
 
 ::selection { background: color-mix(in srgb, var(--acc1) 30%, transparent); }
 
-
+/* ═══════════ بنر دانشگاه ═══════════ */
 .unibanner {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -143,7 +148,7 @@ main > section { position: relative; z-index: 1; }
 }
 .unibanner-sep { display: none; }
 
-
+/* ═══════════ ناوبری ═══════════ */
 .nav {
   position: fixed;
   top: 29px; left: 0; right: 0;
@@ -225,7 +230,7 @@ html[data-theme="dark"] .icon-moon { opacity: 0; transform: rotate(-90deg) scale
 html[data-theme="light"] .icon-sun { opacity: 0; transform: rotate(90deg) scale(0.4); }
 html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
 
-
+/* ═══════════ نوار پیشرفت ═══════════ */
 #scroll-progress {
   position: fixed;
   top: 29px; left: 0; right: 0;
@@ -236,7 +241,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
   transform: scaleX(0);
 }
 
-
+/* ═══════════ هیرو ═══════════ */
 .hero {
   position: relative;
   min-height: 92svh;
@@ -374,10 +379,11 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
   50% { transform: translate(-50%, 9px); opacity: 1; }
 }
 
-
+/* ═══════════ ساختار بخش‌ها (داشبورد فشرده) ═══════════ */
 .section {
   position: relative;
   padding: clamp(52px, 8vh, 88px) clamp(16px, 5vw, 60px);
+  padding-top: max(104px, 11vh);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -413,7 +419,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
 .section-head h2 { font-size: clamp(26px, 4.2vw, 40px); font-weight: 800; line-height: 1.4; letter-spacing: -0.01em; }
 .section-head p { margin-top: 10px; color: var(--muted); font-size: clamp(13.5px, 1.5vw, 15.5px); }
 
-
+/* ─── انیمیشن ظهور ─── */
 [data-reveal] {
   opacity: 0;
   transform: translateY(30px);
@@ -428,7 +434,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
   html { scroll-behavior: auto; }
 }
 
-
+/* ═══════════ تخته وایت‌برد — رودمپ استاد ═══════════ */
 .board-wrap { position: relative; perspective: 1300px; }
 .board {
   position: relative;
@@ -629,7 +635,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
 }
 .board-wrap:hover .board-hint { opacity: 0.8; }
 
-
+/* ═══════════ تایم‌لاین — کارگاه‌ها (ردیف‌های فشرده) ═══════════ */
 .timeline {
   position: relative;
   max-width: 920px;
@@ -796,7 +802,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
 .tl-link:hover svg { transform: translateX(-3px); }
 .tl-link.soon { opacity: 0.7; border-style: dashed; }
 
-
+/* ═══════════ گریدها و کارت‌ها ═══════════ */
 .grid { display: grid; gap: clamp(14px, 2vw, 22px); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -881,13 +887,13 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
   margin-inline-start: auto;
 }
 
-
+/* کارت تدریسیار */
 .tutor-card { align-items: center; text-align: center; padding: 26px 18px 22px; justify-content: center; gap: 2px; }
 .tutor-card::after { background: linear-gradient(90deg, var(--tile-c), transparent); }
 .tutor-name { font-size: 15.5px; font-weight: 800; }
 .tutor-role { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: 0.01em; }
 
-
+/* ═══════════ کارگاه‌های ویژه ═══════════ */
 .special-box {
   position: relative;
   display: grid;
@@ -919,7 +925,7 @@ html[data-theme="light"] .icon-moon { opacity: 1; transform: rotate(0) scale(1);
 .special-body p { color: var(--muted); margin-bottom: 22px; max-width: 46ch; }
 .special-box .btn { position: relative; z-index: 2; }
 
-
+/* ═══════════ برگزارکنندگان دوره ═══════════ */
 .organizers { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .organizer-card {
   position: relative;
@@ -987,7 +993,7 @@ a.org-mail:hover { color: var(--acc1); border-color: var(--acc1); }
 }
 a.tutor-mail:hover { color: var(--tile-c); border-color: color-mix(in srgb, var(--tile-c) 50%, transparent); background: color-mix(in srgb, var(--tile-c) 8%, transparent); }
 
-
+/* ═══════════ پاورقی ═══════════ */
 .footer {
   position: relative;
   z-index: 1;
@@ -1023,7 +1029,7 @@ a.tutor-mail:hover { color: var(--tile-c); border-color: color-mix(in srgb, var(
 }
 .footer-wave { width: 160px; height: 20px; }
 
-
+/* ═══════════ ریسپانسیو ═══════════ */
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }

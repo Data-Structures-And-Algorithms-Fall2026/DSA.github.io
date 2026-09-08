@@ -87,7 +87,7 @@ const TUTORS = [
 ];
 
 const LINKS = {
-  course: 'https://quera.org/course/add_to_course/course/29036/',
+  course: 'https://quera.org/course/29036',
   telegram: 'https://t.me/+jim1kxHwToMwMDFk',
   special: 'https://github.com/Sec-Lab-SH/LogSentinel',
 };

@@ -1,0 +1,10 @@
+# Local workspace metadata
+.agents/
+.gapcode/
+
+# Generated Pages output
+_site/
+
+# Operating system files
+.DS_Store
+Thumbs.db
