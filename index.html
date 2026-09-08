@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کلاس درس ساختمان داده و الگوریتم‌ها</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a101c'/%3E%3Ccircle cx='32' cy='16' r='6' fill='none' stroke='%2317b3a6' stroke-width='2.4'/%3E%3Ccircle cx='18' cy='44' r='6' fill='none' stroke='%2317b3a6' stroke-width='2.4'/%3E%3Ccircle cx='46' cy='44' r='6' fill='none' stroke='%2317b3a6' stroke-width='2.4'/%3E%3Cpath d='M28 21 21 39M36 21l7 18' stroke='%2317b3a6' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div class="unibanner">
+  <span class="unibanner-sep" aria-hidden="true"></span>
+  <p>دانشکده ریاضی و علوم کامپیوتر · دانشگاه صنعتی امیرکبیر</p>
+</div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#home">
+    <span class="brand-text">ساختمان داده و الگوریتم‌ها</span>
+    <span class="brand-term">1405</span>
+  </a>
+  <nav class="links" aria-label="دستگاه‌های اصلی">
+    <a href="#class-roadmap">رودمپ کلاس</a>
+    <a href="#tutoring-roadmap">رودمپ تدریسیاری</a>
+    <a href="#exercises">تمرین‌ها</a>
+    <a href="#workshops-special">کارگاه‌های ویژه</a>
+    <a href="#tutors">برگزارکنندگان</a>
+  </nav>
+  <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم">
+    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/>
+      </g>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="16.5" cy="7" r="0.9" fill="currentColor"/><circle cx="19" cy="10" r="0.6" fill="currentColor"/>
+    </svg>
+  </button>
+</header>
+
+<main>
+<div class="deco" id="deco-bg" aria-hidden="true"></div>
+
+<section id="home" class="hero view active">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glyphs" id="hero-glyphs" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-kicker" data-reveal>دوره پاییز 1405</p>
+    <h1 class="hero-title" data-reveal data-d="1">
+      <span class="line"><span>کلاس درس</span></span>
+      <span class="line"><span>ساختمان داده و الگوریتم‌ها</span></span>
+    </h1>
+    <p class="hero-sub" data-reveal data-d="2">دانشکده ریاضی و علوم کامپیوتر، دانشگاه صنعتی امیرکبیر</p>
+    <div class="hero-cta" data-reveal data-d="3">
+      <a href="#class-roadmap" class="btn btn-primary">
+        <svg viewBox="0 0 20 20" class="btn-ic" aria-hidden="true"><path d="M2 10h13M10 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ورود به رودمپ کلاس
+      </a>
+      <a href="#tutoring-roadmap" class="btn btn-ghost">مسیر تدریسیاری</a>
+    </div>
+    <div class="hero-meta" data-reveal data-d="4">
+      <div class="meta-item"><span class="meta-num math" data-count="30">0</span><span class="meta-label">جلسه کلاس</span></div>
+      <div class="meta-sep"></div>
+      <div class="meta-item"><span class="meta-num math" data-count="14">0</span><span class="meta-label">جلسه کارگاه (13+1)</span></div>
+      <div class="meta-sep"></div>
+      <div class="meta-item"><span class="meta-num math" data-count="6">0</span><span class="meta-label">سری تمرین</span></div>
+    </div>
+  </div>
+  <a href="#class-roadmap" class="scroll-hint" aria-label="اسکرول به پایین">
+    <svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v30M5 26l7 8 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<section id="class-roadmap" class="section view">
+  <div class="section-head">
+    <span class="section-tag" data-reveal><span class="tag-num math">01</span> نقشه راه</span>
+    <h2 data-reveal data-d="1">رودمپ کلاس — دکتر دوره</h2>
+  </div>
+  <div class="board-wrap" data-reveal data-d="2">
+    <div class="board" id="board" dir="ltr">
+      <svg class="board-wave" id="board-wave" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#17b3a6"/>
+            <stop offset="0.38" stop-color="#3e7cb8"/>
+            <stop offset="0.72" stop-color="#c9972e"/>
+            <stop offset="1" stop-color="#5a90c4"/>
+          </linearGradient>
+        </defs>
+        <path id="wave-glow" pathLength="1" d=""/>
+        <path id="wave-path" pathLength="1" d=""/>
+      </svg>
+      <div class="board-track" id="board-track"></div>
+    </div>
+    <div class="board-controls">
+      <button id="board-prev" class="board-btn" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="board-progress" aria-hidden="true"><div id="board-progress-fill"></div></div>
+      <button id="board-next" class="board-btn" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section id="tutoring-roadmap" class="section section-alt view">
+  <div class="section-head">
+    <span class="section-tag" data-reveal><span class="tag-num math">02</span> همراهی تدریس</span>
+    <h2 data-reveal data-d="1">رودمپ تدریسیاری</h2>
+  </div>
+  <div class="timeline" id="timeline">
+    <canvas id="river-canvas" aria-hidden="true"></canvas>
+    <div class="tl-line" aria-hidden="true"><div class="tl-line-fill" id="tl-fill"></div></div>
+    <div class="tl-items" id="tl-items"></div>
+  </div>
+</section>
+
+<section id="exercises" class="section view">
+  <div class="section-head">
+    <span class="section-tag" data-reveal><span class="tag-num math">03</span> تمرین</span>
+    <h2 data-reveal data-d="1">تمرین‌ها</h2>
+    <p data-reveal data-d="2">شش سری تمرین — لینک هر سری به‌محض انتشار قابل دسترسی است</p>
+  </div>
+  <div class="grid grid-3" id="exercises-grid"></div>
+</section>
+
+<section id="workshops-special" class="section section-alt view">
+  <div class="special-box" data-reveal>
+    <div class="special-art" id="special-art" aria-hidden="true"></div>
+    <div class="special-body">
+      <span class="section-tag"><span class="tag-num math">04</span> ویژه</span>
+      <h2>کارگاه‌های ویژه</h2>
+      <p>مباحث پیوسته و کاربرد ساختمان داده در امنیت سایبری، تحلیل لاگ، هشینگ و IOT</p>
+      <a class="btn btn-primary" href="https://github.com/Sec-Lab-SH/LogSentinel" target="_blank" rel="noopener">
+        کارگاه‌های ویژه
+        <svg viewBox="0 0 20 20" class="btn-ic" aria-hidden="true"><path d="M10 2.5 3.5 5v5c0 4 2.8 6.4 6.5 7.5 3.7-1.1 6.5-3.5 6.5-7.5V5L10 2.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7.4 10l1.8 1.8 3.4-3.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="tutors" class="section view">
+  <div class="section-head">
+    <span class="section-tag" data-reveal><span class="tag-num math">05</span> برگزارکنندگان</span>
+    <h2 data-reveal data-d="1">برگزارکنندگان دوره</h2>
+    <p data-reveal data-d="2">استاد دوره و تدریسیاران در طول ترم همراه شما هستند</p>
+  </div>
+  <div class="organizers">
+    <div class="organizer-card prof-card" id="professor-card" data-reveal>
+      <div class="org-badge prof">استاد دوره</div>
+      <h3 class="org-name" id="prof-name">دکتر زهرا قربانعلی</h3>
+      <p class="org-mail" id="prof-mail" dir="ltr">z_ghorbanali@aut.ac.ir</p>
+    </div>
+    <div class="grid grid-4" id="tutors-grid"></div>
+  </div>
+  <div class="org-links" data-reveal data-d="1">
+    <a class="btn btn-ghost" id="course-link" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 20 20" class="btn-ic" aria-hidden="true"><path d="M4 5.5h12M4 10h12M4 14.5h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      درس در کوئرا
+    </a>
+    <a class="btn btn-ghost" id="tg-link" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 20 20" class="btn-ic" aria-hidden="true"><path d="M3 10.5 17 4l-2 12-5-3-3 2v-4z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      گروه تلگرام
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div>
+        <p class="footer-title">کلاس درس ساختمان داده و الگوریتم‌ها</p>
+        <p class="footer-sub">دانشکده ریاضی و علوم کامپیوتر · دانشگاه صنعتی امیرکبیر · پاییز 1405</p>
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="لینک‌های پاورقی">
+      <a href="#class-roadmap">رودمپ کلاس</a>
+      <a href="#tutoring-roadmap">رودمپ تدریسیاری</a>
+      <a href="#exercises">تمرین‌ها</a>
+      <a href="#workshops-special">کارگاه‌های ویژه</a>
+      <a href="#tutors">برگزارکنندگان</a>
+    </nav>
+  </div>
+  <div class="footer-base">
+    <span>ساختمان داده و الگوریتم‌ها — پاییز 1405</span>
+    <svg class="footer-wave" viewBox="0 0 220 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12c20-14 40-14 60 0s40 14 60 0 40-14 60 0 40 14 40 0" fill="none" stroke="var(--muted)" stroke-width="1.2" opacity="0.55"/></svg>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/illustrations.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
