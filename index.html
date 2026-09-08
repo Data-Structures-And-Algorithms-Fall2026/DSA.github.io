@@ -24,14 +24,24 @@
     <span class="brand-text">ساختمان داده و الگوریتم‌ها</span>
     <span class="brand-term">1405</span>
   </a>
-  <nav class="links" aria-label="دستگاه‌های اصلی">
+  <nav class="links" id="nav-links" aria-label="دستگاه‌های اصلی">
     <a href="#class-roadmap">رودمپ کلاس</a>
     <a href="#tutoring-roadmap">رودمپ تدریسیاری</a>
     <a href="#exercises">تمرین‌ها</a>
     <a href="#workshops-special">کارگاه‌های ویژه</a>
     <a href="#tutors">برگزارکنندگان</a>
   </nav>
-  <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم">
+  <div class="nav-actions">
+    <button id="nav-toggle" class="nav-toggle" aria-label="منو" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="ham-bars">
+          <line class="ham-top" x1="4" y1="7" x2="20" y2="7"/>
+          <line class="ham-mid" x1="4" y1="12" x2="20" y2="12"/>
+          <line class="ham-bot" x1="4" y1="17" x2="20" y2="17"/>
+        </g>
+      </svg>
+    </button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم" title="تغییر تم">
     <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
       <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
@@ -43,6 +53,7 @@
       <circle cx="16.5" cy="7" r="0.9" fill="currentColor"/><circle cx="19" cy="10" r="0.6" fill="currentColor"/>
     </svg>
   </button>
+  </div>
 </header>
 
 <main>
@@ -99,11 +110,9 @@
       </svg>
       <div class="board-track" id="board-track"></div>
     </div>
-    <div class="board-controls">
-      <button id="board-prev" class="board-btn" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <div class="board-progress" aria-hidden="true"><div id="board-progress-fill"></div></div>
-      <button id="board-next" class="board-btn" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
+    <button id="board-prev" class="board-btn board-btn--tl" aria-label="قبلی"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button id="board-next" class="board-btn board-btn--tr" aria-label="بعدی"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="board-progress" aria-hidden="true"><div id="board-progress-fill"></div></div>
   </div>
 </section>
 

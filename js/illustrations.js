@@ -1,4 +1,4 @@
-/* SVG topic illustrations (viewBox 0..100). Colors follow var(--ink)/var(--acc). */
+
 (function () {
   'use strict';
 
@@ -124,7 +124,7 @@
     ${node(22, 74, '50', false, 6.5)}${node(42, 74, '40', false, 6.5)}${node(58, 74, '30', false, 6.5)}${node(78, 74, '20', false, 6.5)}
     ${t(50, 94, 'A[i] ≥ A[2i], A[2i+1]', 'fill="var(--muted)" opacity="0.85"', 5.5)}`;
 
-/* ── Master ── */
+
   const master = () => `
     <line x1="14" y1="84" x2="90" y2="84" ${M}/><line x1="14" y1="84" x2="14" y2="12" ${M}/>
     <rect x="22" y="52" width="16" height="30" fill="var(--acc)" fill-opacity="0.14" stroke="var(--acc)" stroke-width="1.2"/>
@@ -142,7 +142,7 @@
     <circle cx="42.5" cy="68.5" r="5.4" fill="var(--acc)" fill-opacity="0.55"/>
     ${t(50, 90, 'sparse', 'fill="var(--muted)"', 6)}`;
 
-  /* ── KMP ── */
+  
   const kmp = () => `
     <g ${M}>
       <rect x="12" y="18" width="9" height="9" rx="1.5"/><rect x="23" y="18" width="9" height="9" rx="1.5"/><rect x="34" y="18" width="9" height="9" rx="1.5"/><rect x="45" y="18" width="9" height="9" rx="1.5"/><rect x="56" y="18" width="9" height="9" rx="1.5"/><rect x="67" y="18" width="9" height="9" rx="1.5"/><rect x="78" y="18" width="9" height="9" rx="1.5"/>
@@ -154,7 +154,7 @@
     <path d="M53 86 c 10 -6, 16 -4, 22 2 m-4 -4 l5 2 l-2 5" ${A}/>
     ${t(50, 97, 'KMP · π(i)', 'fill="var(--muted)"', 5.5)}`;
 
-/* ── AVL ── */
+
   const avl = () => `
     ${edge(50, 16, 34, 42)}${edge(50, 16, 70, 42)}
     ${edge(34, 42, 24, 68)}${edge(34, 42, 44, 68)}${edge(70, 42, 80, 68)}
@@ -217,7 +217,7 @@
     return g;
   };
 
-  /* ── BST / AVL ── */
+  
   const bst = () => `
     ${edge(50, 18, 34, 44)}${edge(50, 18, 72, 44)}
     ${edge(34, 44, 24, 70)}${edge(34, 44, 44, 70)}${edge(72, 44, 62, 70)}${edge(72, 44, 84, 70)}

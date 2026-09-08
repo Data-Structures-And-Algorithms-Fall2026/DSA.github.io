@@ -1,3 +1,4 @@
+
 (function () {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
@@ -6,16 +7,16 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-
+  
   const tickers = new Set();
-  const MAX_DT = 50; // ms
+  const MAX_DT = 50; 
   let lastTick = performance.now();
   function runTickers(now) {
     let dt = now - lastTick;
     lastTick = now;
     if (dt > MAX_DT) dt = MAX_DT;
     if (dt < 0) dt = 0;
-    for (const fn of tickers) { try { fn(dt / 16.67); } catch (e) { /* noop */ } }
+    for (const fn of tickers) { try { fn(dt / 16.67); } catch (e) {  } }
   }
   let clockHandle = null;
   if (typeof setInterval !== 'undefined') {
@@ -61,6 +62,35 @@
     root.dataset.theme = next;
     localStorage.setItem('ds-theme', next);
   });
+
+  
+  (function mobileMenu() {
+    const nav = $('#nav');
+    const btn = $('#nav-toggle');
+    const links = $('#nav-links');
+    if (!nav || !btn) return;
+    const mq = matchMedia('(max-width: 820px)');
+    function close() {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    
+    links?.addEventListener('click', (e) => {
+      if (e.target.closest('a')) close();
+    });
+    
+    document.addEventListener('pointerdown', (e) => {
+      if (!nav.classList.contains('open')) return;
+      if (!nav.contains(e.target)) close();
+    });
+    
+    const onMq = () => { if (!mq.matches) close(); };
+    mq.addEventListener ? mq.addEventListener('change', onMq) : mq.addListener(onMq);
+  })();
 
   (function heroCanvas() {
     const cv = $('#hero-canvas');
@@ -245,7 +275,7 @@
     }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
     const pending = new Set();
 
-/* getBoundingClientRect — IO throttled */
+
     function rectCheck() {
       const active = document.querySelector('.view.active');
       if (!active) return;
@@ -286,7 +316,7 @@
       views.forEach(v => v.classList.toggle('active', v.id === id));
       window.scrollTo({ top: 0, behavior: 'auto' });
 
-      void target.offsetWidth; // reflow
+      void target.offsetWidth; 
       if (id === 'class-roadmap') boardRelayout();
       if (id === 'home' && window.__heroResize) window.__heroResize();
       if (window.__riverResize) window.__riverResize();
@@ -302,7 +332,7 @@
       if (a.dataset.soon && !a.getAttribute('href').slice(1)) return;
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        // external or new-tab links: let the browser handle them
+        
         if (a.target === '_blank' || /^https?:\/\//i.test(href)) return;
         const id = href.slice(1);
         if (!id) return;
@@ -311,7 +341,7 @@
       });
     });
 
-/* hash ( #tutors ) */
+
     const initHash = (location.hash || '').slice(1);
     if (initHash) show(initHash, false);
     else show('home', false);
@@ -327,7 +357,7 @@
     addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
     update();
 
-/* hashchange ( ) */
+
     addEventListener('hashchange', () => {
       const id = (location.hash || '#home').slice(1);
       show(id, false);
@@ -515,7 +545,7 @@
         it.classList.toggle('in', r.top < vh * 0.8);
       });
     }
-/* ( throttling) / */
+
     tickers.add(() => update());
     let ticking = false;
     addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
@@ -741,7 +771,7 @@
       </a>`).join('');
   })();
 
-  /* organizers: professor + tutors */
+  
   (function organizers() {
     const grid = $('#tutors-grid');
     if (grid) {

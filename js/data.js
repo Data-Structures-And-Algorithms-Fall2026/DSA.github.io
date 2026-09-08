@@ -1,4 +1,4 @@
-/* Data for the DS course site. */
+
 
 const CLASS_ROADMAP = [
   { n: 1,  art: 'algo',        color: 0, title: 'مقدمات — شروع الگوریتم‌ها', sub: ['ورودی و خروجی و درستی الگوریتم', 'پس‌کد', 'تفاوت الگوریتم و برنامه'] },
@@ -80,10 +80,10 @@ const PROFESSOR = {
 };
 
 const TUTORS = [
-  { name: 'سید حمید حسینی', email: 'iamhamidhosseini@gmail.com' },
-  { name: 'علی جعفری',       email: 'ali.jafari.2114@gmail.com' },
   { name: 'سید حسن علوی',    email: 'hassan.alavi.ha@gmail.com' },
+  { name: 'علی جعفری',       email: 'ali.jafari.2114@gmail.com' },
   { name: 'شروین رجبی',      email: 'ShervinRajabi2016@gmail.com' },
+  { name: 'سید حمید حسینی', email: 'iamhamidhosseini@gmail.com' },
 ];
 
 const LINKS = {
