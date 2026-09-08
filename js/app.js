@@ -1,4 +1,3 @@
-/* DS course site - main logic and animations */
 (function () {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
@@ -7,8 +6,7 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* robust animation clock: side WebViews throttle rAF/setInterval, so we
-     drive everything from a shared interval with a clamped timestep */
+
   const tickers = new Set();
   const MAX_DT = 50; // ms
   let lastTick = performance.now();
